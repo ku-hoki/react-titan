@@ -1,0 +1,64 @@
+.card_test{
+    padding: 25px;
+    width: 546px;
+    height: 438px;
+    background: #FFFFFF;
+    box-shadow: 6px 4px 4px rgba(0, 35, 160, 0.25);
+    border-radius: 10px;
+    margin-right: 21px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+    h3{
+      align-self: start;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 100%;
+      color: #333333;
+      margin-bottom: 15px;
+    }
+  
+    img{
+      object-fit: cover;
+      border-radius: 5px;
+      margin-bottom: 30px;
+    }
+  
+    p{
+      font-family: "Montserrat", sans-serif;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 100%;
+      color: #333333;
+      width: 100%;
+      margin-bottom: 30px;
+    }
+  
+    button{
+      width: 250px;
+      height: 36px;
+      border-radius: 10px;
+      background-color: #0023A0;
+      color: #FFFFFF;
+      border: none;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 400;
+      font-size: 16px;
+      cursor: pointer;
+      box-shadow: 6px 4px 4px 0px #0023a040;
+  
+      &:hover{
+        background-color: #3659D6;
+      }
+    
+      &:active{
+        border: 1px solid #0023A0;
+        background-color: #FFFFFF;
+        color: #0023A0;
+      }
+  
+    }
+  }
+  

@@ -1,5 +1,21 @@
 import './index.scss';
+import CardCourse from './components/cardCourse';
+import CardTest from './components/cardTest';
 
+const arrCardCourse = [
+  {title: 'Новый курс', topicCourse: 'Основы управления проектами', imgUrl: '/img/women-1.png'},
+  {title: 'Новый курс', topicCourse: 'Основы управления проектами', imgUrl: '/img/women-1.png'},
+  {title: 'Новый курс', topicCourse: 'Основы управления проектами', imgUrl: '/img/women-1.png'},
+  {title: 'Новый курс', topicCourse: 'Основы управления проектами', imgUrl: '/img/women-1.png'},
+];
+
+const arrCardTest = [
+  {title: "Название теста", description: 'Описание теста в две-три строки', imgUrl: '/img/card-test.jpg'},
+  {title: "Название теста", description: 'Описание теста в две-три строки', imgUrl: '/img/card-test.jpg'},
+  {title: "Название теста", description: 'Описание теста в две-три строки', imgUrl: '/img/card-test.jpg'},
+
+
+];
 
 function App() {
   return (
@@ -51,30 +67,13 @@ function App() {
         тесты для повышения квалификации</p>
 
         <div className="d-flex">
-          <div className="card">
-            <h3>Новый курс</h3>
-            <p>Основы упраления проектами</p>
-            <img width = {363} height = {249.12} src="/img/women-1.png" alt="Илюстрация курса"/>
-            <button>Перейти</button>
-          </div>
-          <div className="card">
-            <h3>Новый курс</h3>
-            <p>Основы упраления проектами</p>
-            <img width = {363} height = {249.12} src="/img/women-1.png" alt="Илюстрация курса"/>
-            <button>Перейти</button>
-          </div>
-          <div className="card">
-            <h3>Новый курс</h3>
-            <p>Основы упраления проектами</p>
-            <img width = {363} height = {249.12} src="/img/women-1.png" alt="Илюстрация курса"/>
-            <button>Перейти</button>
-          </div>
-          <div className="card">
-            <h3>Новый курс</h3>
-            <p>Основы упраления проектами</p>
-            <img width = {363} height = {249.12} src="/img/women-1.png" alt="Илюстрация курса"/>
-            <button>Перейти</button>
-          </div>
+          {arrCardCourse.map((obj) =>(
+            <CardCourse 
+              title = {obj.title}
+              topicCourse = {obj.topicCourse}
+              imgUrl = {obj.imgUrl}
+            />
+          ))}
         </div>
 
         <div className="cards-btn">
@@ -94,30 +93,13 @@ function App() {
         </p>
 
         <div className="d-flex">
-          <div className='card-test'> 
-            <h3>Тест: Название теста</h3>
-            <img width = {496} height = {190} src = "/img/card-test.jpg" alt = "Пример теста"/>
-            <p>Описание теста в две-три строкиОписание теста в две-три <br/>
-            строкиОписание теста в две-три строкиОписание теста в <br/>
-            две-три строки</p>
-            <button>Пройти тест</button>
-          </div>
-          <div className='card-test'> 
-            <h3>Тест: Название теста</h3>
-            <img width = {496} height = {190} src = "/img/card-test.jpg" alt = "Пример теста"/>
-            <p>Описание теста в две-три строкиОписание теста в две-три <br/>
-            строкиОписание теста в две-три строкиОписание теста в <br/>
-            две-три строки</p>
-            <button>Пройти тест</button>
-          </div>
-          <div className='card-test'> 
-            <h3>Тест: Название теста</h3>
-            <img width = {496} height = {190} src = "/img/card-test.jpg" alt = "Пример теста"/>
-            <p>Описание теста в две-три строкиОписание теста в две-три <br/>
-            строкиОписание теста в две-три строкиОписание теста в <br/>
-            две-три строки</p>
-            <button>Пройти тест</button>
-          </div>
+          {arrCardTest.map((obj) => (
+            <CardTest 
+              title = {obj.title}
+              description = {obj.description}
+              imgUrl = {obj.imgUrl}
+            />
+          ))}
         </div>
 
         <div className='test-btn'>
