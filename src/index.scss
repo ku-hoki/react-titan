@@ -1,9 +1,8 @@
-
 .wrapper-2,
 .wrapper-3{
   max-width: 1440px;  // или 1200px, если дизайн уже
   margin: 0 auto;
-  
+  padding: 0 20px;
   
 }
 
@@ -23,7 +22,7 @@ body {
 }
 
 header{
-  padding: 120px;
+  padding: 4vw;
 
   .headerCenter{
     color: #FFFFFF ;
@@ -91,25 +90,25 @@ header{
 }
 
 .content{
-  padding: 120px;
+  padding: 4vw;
   color: #FFFFFF ;
-  gap: 62px;
+  gap: 2vw;
   h1{
-    width: 960px;
+    width: 60vw;
     margin: 0;
 
     font-weight: 700;
-    font-size: 74px;
+    font-size: 4vw;
     line-height: 100%;
     letter-spacing: 0%;
   
   }
   p{
-    width: 929px;
+    width: 60vw;
     margin: 0;
 
     font-weight: 500;
-    font-size: 32px;
+    font-size: 2vw;
     line-height: 100%;
     
   }
@@ -117,16 +116,16 @@ header{
 
 .butTest{
   position: absolute;
-  width: 546px;
-  height: 96px;
-  top: 687px;
-  left: 118px;
+  width: 30vw;
+  height: 6vw;
+  top: 50%;
+  left: 4vw;
   border-radius: 10px;
   background-color: #5CB300;
   color: #FFFFFF;
   font-family: Montserrat;
   font-weight: 500;
-  font-size: 32px;
+  font-size: 1.5vw;
   line-height: 100%;
   letter-spacing: 0%;
   border: none;
@@ -171,6 +170,16 @@ header{
 }
 */
 .wrapper-2{
+
+  .d-flex{
+    
+    justify-content: center;
+    gap: 22px;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
   padding: 123px;
   h2{
     margin: 0;
@@ -257,6 +266,14 @@ header{
 
 
 .wrapper-3{
+
+  .d-flex{
+    justify-content: center;
+    gap: 20px;
+    margin: 0 auto;
+    padding: 0 20px;
+    max-width: 1440px;
+  }
   margin: 0 auto;
   padding: 100px 118px;
   h2 {
@@ -348,5 +365,93 @@ header{
         }
       }
     }
+  }
+}
+// Адаптив под разные устройства:
+@media (max-width: 1400px) {
+  .card {
+    width: 280px; // Чуть уже на ноутбуках
+  }
+}
+
+@media (max-width: 1024px) {
+  .d-flex {
+    justify-content: center;
+  }
+  .card {
+    width: 45%; // По две карточки в ряд
+  }
+}
+
+@media (max-width: 768px) {
+  .d-flex {
+    justify-content: center;
+  }
+  .card {
+    width: 90%; // По одной карточке на телефонах
+  }
+}
+
+@media (min-width: 2000px){
+  .wrapper-2, .wrapper-3{
+    max-width: 80vw;
+  }
+
+  .section-1, .section-2, .section-3 {
+    height: auto;
+    min-height: 100vh;
+  }
+}
+
+@media (min-width: 1920px) and (max-width: 1920px) {
+  .wrapper-2, .wrapper-3 {
+    max-width: 1800px;
+    padding: 100px 150px;
+  }
+
+  .section-1 {
+    height: 1080px;
+  }
+
+  .content {
+    h1 {
+      font-size: 64px;
+      width: 800px;
+    }
+    p {
+      font-size: 32px;
+      width: 800px;
+    }
+  }
+
+  .butTest {
+    width: 400px;
+    height: 80px;
+    font-size: 24px;
+  }
+
+  .section-2 {
+    height: 1080px;
+  }
+
+  .section-3 {
+    height: 1080px;
+  }
+
+  .wrapper-3 {
+    h2 {
+      font-size: 40px;
+      width: 700px;
+    }
+    p {
+      font-size: 28px;
+      width: 1000px;
+    }
+  }
+
+  .test-btn button {
+    width: 500px;
+    height: 70px;
+    font-size: 24px;
   }
 }

@@ -45,7 +45,7 @@ function Main() {
                             <button className="login">
                                 Войти
                             </button>
-                            <button className="regis">Регистрация</button>
+                            
                         </div>
                     </header>
                     <div className="content d-flex flex-column">

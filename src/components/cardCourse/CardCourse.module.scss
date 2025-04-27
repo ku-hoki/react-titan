@@ -1,69 +1,122 @@
+.card {
+  padding: 20px;
+  width: 320px;
+  background-color: #FFFFFF;
+  filter: drop-shadow(6px 4px 10px rgba(0, 35, 160, 0.25));
+  border-radius: 10px;
+  margin-right: 27px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
 
-.card{
-    padding: 20px;
-    width: 403px;
-    background-color: #FFFFFF;
-    filter: drop-shadow(6px 4px 10px rgba(0, 35, 160, 0.25));
+  h3 {
+
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    margin-bottom: 5px;
+  }
+
+  p {
+
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #5CB300;
+    margin-bottom: 15px;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 20px;
+  }
+
+  button {
+    width: 335px;
+    height: 46px;
+    top: 387px;
+    left: 34px;
     border-radius: 10px;
-    margin-right: 27px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    background-color: #5CB300;
+    border: none;
+    cursor: pointer;
+    align-self: center;
+    margin-top: 10px;
+
+    color: #FFFFFF;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 100%;
+    letter-spacing: 0%;
     text-align: center;
-    position: relative;
-    h3{
-      
-      font-weight: 300;
-      font-size: 16px;
-      line-height: 100%;
-      letter-spacing: 0%;
-      margin-bottom: 5px;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: #4A9200;
     }
-  
-    p{
-      
-      font-weight: 400;
-      font-size: 18px;
-      line-height: 100%;
-      letter-spacing: 0%;
+
+    &:active {
+      border: 1px solid #5CB300;
+      background-color: #FFFFFF;
       color: #5CB300;
-      margin-bottom: 15px;
-    }
-  
-    img {
-      width: 100%;
-      height: auto;
-      border-radius: 5px;
-      margin-bottom: 20px;
-    }
-  
-    button{
-      width: 335px;
-      height: 46px;
-      top: 387px;
-      left: 34px;
-      border-radius: 10px;
-      background-color: #5CB300;
-      border: none;
-      cursor: pointer;
-      align-self: center;
-  
-  
-      color: #FFFFFF;
-      font-weight: 400;
-      font-size: 18px;
-      line-height: 100%;
-      letter-spacing: 0%;
-      text-align: center;
-  
-      &:hover {
-        background-color: #4A9200;
-      }
-      &:active{
-        border: 1px solid #5CB300;
-        background-color: #FFFFFF;
-        color: #5CB300;
-      }
     }
   }
-  
+}
+
+/* Адаптация кнопки внутри карточки */
+@media (max-width: 1400px) {
+  .card {
+    button {
+      width: 200px;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .card {
+    button {
+      width: 240px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+    button {
+      width: 200px;
+    }
+  }
+}
+
+@media (min-width: 1920px) and (max-width: 1920px) {
+  .card {
+    width: 500px;
+    padding: 30px;
+    margin-right: 40px;
+
+    h3 {
+      font-size: 20px;
+    }
+
+    p {
+      font-size: 22px;
+    }
+
+    img {
+      margin-bottom: 30px;
+    }
+
+    button {
+      width: 420px;
+      height: 56px;
+      font-size: 22px;
+    }
+  }
+}

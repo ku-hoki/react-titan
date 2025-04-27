@@ -7,7 +7,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            
+
         }
 
         .logo {
@@ -95,7 +95,7 @@
     background: url('/assets/img/5.png') no-repeat center center;
     overflow: hidden;
     background-size: cover;
-    
+
     &::before {
         content: "";
         position: absolute;
@@ -107,16 +107,17 @@
         backdrop-filter: blur(5px);
         z-index: 0;
     }
-    > * {
+
+    >* {
         position: relative;
         z-index: 1;
     }
 
-    .hero-content{
+    .hero-content {
         padding: 118px;
         color: #fff;
 
-        h1{
+        h1 {
             width: 831px;
             font-family: 'Montserrat', sans-serif;
             font-weight: 700;
@@ -126,7 +127,7 @@
             margin-bottom: 62px;
         }
 
-        p{
+        p {
             width: 828px;
             font-family: 'Montserrat', sans-serif;
             font-weight: 500;
@@ -138,14 +139,28 @@
 }
 
 .materials-section {
+    /*
     display: flex;
     position: relative;
     background-color: #fff;
+    */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 80px 20px;
+
 
     .materials-left {
+        /*
         width: 970px;
         padding: 120px;
         margin-right: 400px;
+        */
+        flex: 1 1 750px;
+        max-width: 850px;
 
         .materials-container {
             h2 {
@@ -169,7 +184,7 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                
+
                 .slider-arrow {
                     position: absolute;
                     background: none;
@@ -323,6 +338,7 @@
     }
 
     .materials-right {
+        /*
         position: absolute;
         width: 950px;
         height: 1080px;
@@ -330,47 +346,73 @@
         right: 3px;
         border-bottom-left-radius: 20px;
         overflow: hidden;
+        */
+
+        flex: 1 1 750px;
+        max-width: 950px;
+        height: 1076px;
+        background: rgba(0, 0, 0, 0.5);
+        border-radius: 20px;
+        padding: 40px;
+        color: #FFFFFF;
+        position: relative;
+        
 
         &::before {
             content: '';
             position: absolute;
-            width: 1977px;
-            height: 1207px;
-            top: -30px;
-            left: -619px;
+            inset: 0; // Вместо top, left, width, height
             background: url('../assets/img/back-women.png') no-repeat center center;
             background-size: cover;
             backdrop-filter: blur(7.4px);
             z-index: 0;
+            border-radius: 20px;
         }
 
         .course-details {
-            position: relative;
-            width: 846px;
-            height: 976px;
-            top: 50px;
-            left: 50px;
+            position: relative; // Было: absolute
+            width: 100%; // Было: 846px
+             // Лучше сделать адаптивно
+            padding: 10px 60px; // Меньше отступы
+            box-sizing: border-box;
             border-radius: 20px;
             background: rgba(0, 0, 0, 0.5);
             z-index: 1;
-            padding: 45px 85px;
-            box-sizing: border-box;
-
+            margin-top: 0; // Заменяем top: 50px
+            overflow-y: auto;
             p {
-                width: 676px;
+                width: 100%; // Было: 676px
                 font-family: 'Montserrat', sans-serif;
                 font-weight: 300;
-                font-size: 30px;
+                font-size: 28px;
                 line-height: 36px;
-                letter-spacing: 0;
                 text-align: center;
-                color: #FFFFFF;
                 margin-bottom: 20px;
-
-                &:last-child {
-                    margin-bottom: 0;
-                }
             }
+        }
+    }
+}
+
+/* Адаптив */
+@media (max-width: 1400px) {
+    .materials-section {
+        flex-direction: column;
+        align-items: center;
+
+        .materials-left,
+        .materials-right {
+            max-width: 90%;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .materials-section {
+        padding: 40px 10px;
+
+        .materials-left,
+        .materials-right {
+            padding: 20px;
         }
     }
 }
